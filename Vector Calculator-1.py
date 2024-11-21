@@ -9,19 +9,14 @@ print("Will this operation be addition or multiplication?")
 time.sleep(1)  # Wait for 1 seconds
 
 calc = input("Enter [A] for addition or [M] for multiplication: ")
-while calc != "A" or "M":
+while calc != "A" and calc != "M":
+    calc = input("Please enter a valid command, either [A] for addition or [M] for multiplication:")
 
 
-        if calc=="A":
+if calc == "A":
             print("You have chosen Addition")
-            break
 
-
-        if calc=="M":
+elif calc == "M":
             print("You have chosen Multiplication")
-            break
 
-
-        if not calc=="A" or calc=="M":
-            calc = input("Please enter a valid command, either [A] for addition or [M] for multiplication: ")
-    
+           
